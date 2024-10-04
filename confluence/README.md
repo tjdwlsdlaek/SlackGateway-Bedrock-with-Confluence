@@ -23,9 +23,10 @@ Knowledge Base 이름을 자유롭게 입력합니다.
 다음으로 Confluence URL 및 인증을 위한 AWS Secret Manager arn을 입력해야 합니다.
 ![Bedrock Create 4](../docs/images/bedrock-kb-3.jpg)
 
-Knwoeldge base for Amazon Bedrock의 데이터 소스로 Confluence에 연결하려면 **Base Authentication**과 OAuth 2.0 Authentication 중에서 선택할 수 있습니다. 이번 예제에서는 username(Confluence 사용자 계정 이메일 주소)과 password(Confluence API Token)를 사용해보겠습니다.
+Knowledge Base for Amazon Bedrock의 데이터 소스로 Confluence에 연결하려면 **Base Authentication**과 OAuth 2.0 Authentication 중에서 선택할 수 있습니다. 이번 예제에서는 username(Confluence 사용자 계정 이메일 주소)과 password(Confluence API Token)를 사용해보겠습니다.
 
-먼저 [Confluence URL](https://id.atlassian.com/manage-profile/products)은 Attlasian Account > Product Settings에서 확인할 수 있습니다.
+먼저 Confluence URL은 Attlasian Account > Product Settings에서 확인할 수 있습니다.
+https://id.atlassian.com/manage-profile/products
 
 ![Bedrock with Confluence](../docs/images/confluence-product.jpg)
 
@@ -74,6 +75,8 @@ Sync가 완료되면 아래와 같이 Status가 Completed로 표시됩니다.
     
 - 기존 Lambda 코드 변경
     - 앞서 배포했던 Lambda 함수를 [해당 코드로 변경](../confluence/lambda/index.py)합니다. Knowledge Base를 검색(Retrieve)하고 검색 결과를 Amazon Bedrock Claude Haiku 모델에 전달하여 Slack으로 최종 응답을 받는 형태입니다.
+    - <KNOWLEDGE_BASE_ID>를 이전에 생성했던 Knowledge Base Id로 변경합니다.
+    ![Knowledge base id](../docs/images/bedrock-knowledge-base-id.jpg)
     - Lambda에서 Amazon Bedrock에 Retrieve 요청을 보내기 위해 IAM Role에 아래 내용을 추가합니다.
         ```json
             {
