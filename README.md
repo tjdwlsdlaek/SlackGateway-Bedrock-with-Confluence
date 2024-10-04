@@ -111,7 +111,7 @@ Event Subscriptions가 자동으로 확인되어야 합니다.
 4. 앱 DM 채널에서 Hello라고 말하세요. 팀 채널에서는 @mention으로 도움을 요청하세요.
 
 ### (Option) 6. Confluence 연동하기
-Knowledge base for Amazon Bedrock은 S3, Confluence, Web Crawler 등 [다양한 데이터 소스](https://docs.aws.amazon.com/bedrock/latest/userguide/data-source-connectors.html)를 지원합니다. 자세한 내용은 [confluence README.md](./confluence/README.md) 파일을 참고하시기 바랍니다.
+Knowledge base for Amazon Bedrock은 S3, Confluence, Web Crawler 등 [다양한 데이터 소스](https://docs.aws.amazon.com/bedrock/latest/userguide/data-source-connectors.html)를 지원합니다. 자세한 내용은 [confluence README.md](./confluence/README.md) 파일을 참고하시기 바랍니다.
 
 
 
